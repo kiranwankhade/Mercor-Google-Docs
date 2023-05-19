@@ -1,25 +1,30 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import Toolbar from './Components/Toolbar';
+import TextEditor from './Components/TextEditor';
+import Sidebar from './Components/Sidebar';
 import './App.css';
+import AllRoutes from './Routes/AllRoutes';
+import Home from './Pages/Home';
+import Login from './Pages/Login';
 
-function App() {
+const App = () => {
+  const [content, setContent] = useState('');
+
+  const handleTextChange = (newContent) => {
+    setContent(newContent);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      {/* <Toolbar />
+      <div className="content-container">
+        <Sidebar />
+        <TextEditor content={content} onTextChange={handleTextChange} />
+      </div> */}
+      <AllRoutes/>
+      {/* <Login/> */}
     </div>
   );
-}
+};
 
 export default App;

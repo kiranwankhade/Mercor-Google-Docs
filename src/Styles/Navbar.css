@@ -1,0 +1,82 @@
+#navbar {
+    width: 100%;
+    margin: 2px 15px 2px 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap:10px;
+}
+
+#sidebarHamburger{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; 
+    gap: 30px;
+}
+
+#profileButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+    gap: 30px;
+}
+
+.hamburger{
+    background-color: transparent;
+    border: none;
+    color: #5f6368;
+    font-size: 25px;
+    padding: 2px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.hamburger:hover{
+    background-color: #f1f3f4;
+    border-radius: 25%;
+    overflow: visible;
+}
+
+#logo{
+    height: 40px;
+}
+
+p{
+    color: #5f6368;
+    font-size: 25px;
+}
+
+#quick_search{
+
+     width: 500px;
+     border:none;
+     border-radius: 10px;
+     display: block;
+     padding: 15px 8px 15px 50px;
+     
+     background: #f1f3f4 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center ;
+}
+
+#quick_search:hover{
+    background: white url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'  width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat 13px center ;
+
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border:none;
+    border-radius: 10px;
+    outline: none;
+}
+
+
+#quick_search:focus{
+    outline: none;
+}
+
+
+#profile{
+    height: max-content;
+    width: 50px;
+    border-radius: 50%;
+}
