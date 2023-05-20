@@ -47,20 +47,7 @@ const TextEditor = () => {
     lastSave: null,
   };
 
-  // const myBlockTypes = DefaultDraftBlockRenderMap.merge(new Map({
-  //   center: {
-  //     wrapper: <div className={'center-align'} />,
-  //   },
-  //   right: {
-  //     wrapper: <div className={'right-align'} />,
-  //   },
-  //   left: {
-  //     wrapper: <div className={'left-align'} />,
-  //   },
-  //   justify: {
-  //     wrapper: <div className={'justify-align'} />,
-  //   },
-  // }));
+
   return (
     <div>
       {/* Headers */}
