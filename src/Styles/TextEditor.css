@@ -1,0 +1,175 @@
+#logo{
+    height: 40px;
+    cursor: pointer;
+}
+
+#header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 15px;
+}
+
+#leftHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+#rightHeader{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+
+#headerTitleDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    line-height: 5px;
+}
+
+#headerInputDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 20px;
+    color: #5f6368;
+    font-size: 20px;
+    margin-right: 80px;
+    cursor: pointer;
+}
+
+#timeMeet{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#headerMenuDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+
+#headerMenuDiv>p{
+    font-size: 15px;
+}
+
+#share{
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 15px;
+    border: none;
+    background-color: #c2e7ff;
+}
+
+span{
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+
+#toolbar{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    background-color: #edf2fa;
+    padding: 10px;
+    border-radius: 15px;
+    color: gray;
+}
+
+#toolbar>button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    color: gray;
+    font-size: 20px;
+}
+
+#toolbar>button:hover{
+    background-color: #CDCED0;
+}
+
+#toolbar>select {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    color: gray;
+    font-size: 15px;
+}
+
+
+#toolbar>select:hover{
+    background-color: #CDCED0;
+}
+
+#toolbar>div>button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    color: gray;
+    font-size: 15px;
+}
+
+
+
+
+#toolbar>div>button:hover{
+        background-color: #CDCED0;
+}
+
+#toolbar>span{
+    font-size: 20px;
+    margin-top: -10px;
+}
+
+#fontSize{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.editor{
+    max-width: 70vw;
+    min-height: 100vh;
+    padding: 10px;
+    border: 1px solid rgb(190, 192, 196);
+    margin: 5px auto;
+    border-radius: 1px;
+    background-color: white;
+    
+    box-shadow: 3px 3px 10px 2px rgba(193, 174, 151, 0.38);
+}
+
+.editorHolder{
+    width: 100%;
+    
+    height: 100vh;
+    background-color: rgba(190, 192, 196, 0.15);
+}

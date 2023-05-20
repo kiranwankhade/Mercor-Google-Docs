@@ -1,12 +1,13 @@
 // components/Toolbar.js
 import React from 'react';
 
+import {BiUndo} from 'react-icons/bi'
+
 const Toolbar = () => {
   return (
     <div className="toolbar">
-      {/* Document name */}
-      {/* Formatting options */}
-      {/* Share document button */}
+      <button></button>
+      <button></button>
     </div>
   );
 };

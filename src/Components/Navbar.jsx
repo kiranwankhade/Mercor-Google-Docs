@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import "../Styles/Navbar.css";
 
@@ -7,13 +7,23 @@ import { CgMenuGridO } from "react-icons/cg";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
 import { collection, getDocs, query, where } from "firebase/firestore";
-import { auth, db } from "../firebase";
+import { auth, db,logout } from "../firebase";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
     const [user, loading, error] = useAuthState(auth);
     const [name, setName] = useState("");
+
+    //for logout
+    const [open, setOpen] = React.useState(false);
+
+   const handleOpen = () => {
+     setOpen(!open);
+  };
     const navigate = useNavigate();
-    const fetchUserName = async () => {
+
+    //get user details
+    const fetchUserProfile = async () => {
       try {
         const q = query(collection(db, "users"), where("uid", "==", user?.uid));
         const doc = await getDocs(q);
@@ -26,16 +36,35 @@ const Navbar = () => {
     };
 
     useEffect(() => {
-      if (loading) return;
-      if (!user) return navigate("/");
-      fetchUserName();
+      if (loading){ return};
+      if (!user) {return navigate("/")};
+      fetchUserProfile();
+      document.addEventListener('mousedown', handleOutsideClick);
+
+      return () => {
+        document.removeEventListener('mousedown', handleOutsideClick);
+      };
     }, [user, loading]);
     console.log('user:', user)
+
+    //for sidebar
+    const [isOpen, setIsOpen] = useState(false);
+  const sidebarRef = useRef(null);
+
+  const handleSidebarToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const handleOutsideClick = (event) => {
+    if (sidebarRef.current && !sidebarRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
   return (
     <div id="navbar">
         <div id="sidebarHamburger">
-            <button className="hamburger" title="Main Menu">
-                <FiMenu />
+            <button  ref={sidebarRef}  onClick={handleSidebarToggle} className="hamburger" title="Main Menu">
+            {isOpen ? <Sidebar isOpen={isOpen}/> : <FiMenu /> }
             </button>
             <img
                 id="logo"
@@ -53,17 +82,22 @@ const Navbar = () => {
           type="search"
         />
 
-        <div id="profileButton">
+        <div id="profileHamburgerButton">
 
-      <button className="hamburger" title="Google Apps">
-        <CgMenuGridO />
-      </button>
+        <button className="hamburger" title="Google Apps">
+          <CgMenuGridO />
+        </button>
 
-      <img
-        id="profile"
-        src={user?.photoURL}
-        alt="profile"
-      />
+        <button id="profileButton" onClick={handleOpen}><img
+          id="profile"
+          src={user?.photoURL}
+          alt="profile"
+        /></button>
+        {open ? (
+        
+          <button id="logout" onClick={logout}>Logout</button>
+        
+      ) : null}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 #navbar {
-    width: 100%;
+    /* width: 100%; */
     margin: 2px 15px 2px 5px;
     display: flex;
     flex-direction: row;
@@ -16,13 +16,7 @@
     gap: 30px;
 }
 
-#profileButton{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center; 
-    gap: 30px;
-}
+
 
 .hamburger{
     background-color: transparent;
@@ -79,4 +73,29 @@ p{
     height: max-content;
     width: 50px;
     border-radius: 50%;
+}
+
+
+#profileHamburgerButton{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center; 
+    gap: 30px;
+}
+
+#profileButton{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+#logout{
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color:#5f6368;
+    cursor: pointer;
 }
