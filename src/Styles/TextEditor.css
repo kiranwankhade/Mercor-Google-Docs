@@ -9,7 +9,12 @@
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    margin: 15px;
+    margin: 10px;
+    margin-top: -8px;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #f3f3f3;
 }
 
 #leftHeader{
@@ -32,8 +37,9 @@
 #headerTitleDiv{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 0;
+    /* gap: -10px; */
     line-height: 5px;
 }
 
@@ -45,7 +51,7 @@
     gap: 20px;
     color: #5f6368;
     font-size: 20px;
-    margin-right: 80px;
+    margin-right: 200px;
     cursor: pointer;
 }
 
@@ -96,9 +102,9 @@ span{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 5px;
     background-color: #edf2fa;
-    padding: 10px;
+    padding: 8px;
     border-radius: 15px;
     color: gray;
 }
@@ -136,9 +142,6 @@ span{
     font-size: 15px;
 }
 
-
-
-
 #toolbar>div>button:hover{
         background-color: #CDCED0;
 }
@@ -169,7 +172,313 @@ span{
 
 .editorHolder{
     width: 100%;
-    
     height: 100vh;
     background-color: rgba(190, 192, 196, 0.15);
 }
+
+
+.textContainer .ql-editor{
+    width: 8.5in;
+    min-height: 5in;
+    padding: 1in;
+    margin: 2rem;
+    margin-top: 0.6in;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    scroll-behavior: smooth;
+    overflow-y: scroll;
+}
+
+.textContainer .ql-container.ql-snow{
+    border: none;
+    display: flex;
+    justify-content: center;
+}
+
+.textContainer .ql-toolbar.ql-snow{
+    width: 96%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap: 10px;
+    position: fixed;
+    margin-left: 0.3in;
+    margin-right: 0.2in;
+    /* top: 2; */
+    color: gray;
+    z-index: 1;
+    background-color: #edf2fa;
+    border: none;
+    border-radius: 15px;
+    /* box-shadow: 0 0 5px 0 rgba(0,  0, 0, 0.5); */
+}
+
+@media print {
+   body{
+        background: none;
+   }
+
+   .textContainer .ql-editor{
+        width: 6.5in;
+        height: 9in;
+        padding: 0;
+        margin: 0;
+        box-shadow: none;
+        align-self: flex-start;
+   }
+
+   .textContainer  .ql-toolbar.ql-snow{
+    display: none;
+   }
+
+
+
+}
+
+/*  Share Modal CSS */
+
+.shareModal{
+    position: fixed;
+    width: 550px;
+    z-index: 1040;
+    top: 10%;
+    left: 30%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    color: #000;
+    line-height: 1px;
+    padding: 5px;
+}
+
+
+.backdrop {
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  
+  .shareModal-title {
+    margin: 5px;
+    padding: 5px;
+    font-weight: 500;
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .iconDiv{
+    font-size: 20px;
+    display:flex ;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .shareModal-desc,
+  .shareModal-header,
+  .shareModal-footer {
+    padding: 12px;
+  }
+  
+  .shareModelClose-button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    border: none;
+    background: none;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  button {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .shareModal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    gap: 8px;
+  }
+
+
+  
+  .secondary-button {
+    width: 100px;
+    font-size: 18px;
+    color: white;
+    background-color: #0b57d0;
+    border-radius: 25px;
+  }
+
+  .primary-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    width: 150px;
+    color: #2569d5;
+    background-color: white;
+    border: 1px solid #5f6368;
+    border-radius: 25px;
+    text-align: center;
+  }
+
+  #linkIcon{
+    font-size: 18px;
+  }
+  
+  .modal-example {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  #shareModalInput{
+    width: 330px;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid grey;
+    border-radius: 15px;
+    color: #000;
+  }
+
+  .shareModal-access>p{
+    padding: 5px;
+    font-size: 15px;
+    color: #000;
+    font-weight: 500;
+  }
+
+  .shareModalDetailOwner{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    color: #000;
+  }
+
+
+  .shareModalDetailOwner>div>img{
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+  }
+
+  .shareModalDetailOwner>div{
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+    align-items: center;
+    gap: 10px;
+    color: #000;
+  }
+
+
+  .shareModalDetailOwner>div>div>p{
+    font-size: 15px;
+    line-height: 10px;
+    color: black;
+  }
+
+  .shareModalDetailOwner>div>div>:first-child{
+    font-weight: bold;
+  }
+
+  .shareModalDetailOwner>P{
+    font-size: 15px;
+    padding: 5px;
+    color: #000;
+  }
+
+  .shareModalGeneralAccess>p{
+    font-size: 15px;
+    padding: 5px;
+    color: #000;
+    font-weight: 500;
+  }
+
+  .restrictAccess{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    color: #000;
+  }
+
+
+  .anyoneAccess{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap:20px
+  }
+
+  .accessLink{
+    display: flex;
+    flex-direction: column;
+    justify-content:left;
+    align-items: flex-start;
+    gap:0px
+  }
+
+  .accessLink>select:focus{
+    border: none;
+  }
+
+  .accessLink>select{
+    border: none;
+    font-size: 16px;
+    outline: none;
+    /* padding: 5px; */
+    /* margin-right: '10px'; */
+  }
+
+ .accessLink>p{
+    font-size: 13px;
+    color: #000;
+ }
+
+ .accessSelect{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 5px;
+    margin: 5px;
+    font-size: 15px;
+    color: #000;
+ }
+
+ #selectViewer{
+    border: none;
+    font-size: 16px;
+    outline: none;
+ }

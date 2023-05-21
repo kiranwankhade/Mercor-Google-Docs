@@ -23,6 +23,7 @@ function SignUp() {
     if (loading) return;
     if (user) history("/");
   }, [user, loading]);
+  
   return (
     <div className="register">
       <div className="register__container">

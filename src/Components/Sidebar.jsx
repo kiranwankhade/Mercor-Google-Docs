@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../Styles/Sidebar.css";
 import { Link } from "react-router-dom";
 
@@ -8,6 +8,7 @@ const Sidebar = ({ isOpen }) => {
   return (
     //sidebar
     <div className={`sidebar ${isOpen ? "open" : ""}`}>
+      {/* Title Logo */}
       <div id="sidebarLogo">
         <img
           id="sideLogo"
@@ -17,6 +18,7 @@ const Sidebar = ({ isOpen }) => {
         <h3>Docs</h3>{" "}
       </div>
       <hr />
+      {/* apps logo with links */}
       <div className="sidebarDiv">
         <Link className="spanSide" to={"https://mail.google.com"}>
           <div className="linkSide">
@@ -67,6 +69,7 @@ const Sidebar = ({ isOpen }) => {
         </Link>
       </div>
       <hr />
+      {/* settings and Help */}
       <div className="sidebarDiv">
         <Link className="spanSide">
           <div className="linkSide">
@@ -84,7 +87,7 @@ const Sidebar = ({ isOpen }) => {
         </Link>
       </div>
       <hr />
-
+      {/* Google Drive */}
       <div className="sidebarDiv">
         <Link className="spanSide" to={"https://drive.google.com"}>
           <div className="linkSide">

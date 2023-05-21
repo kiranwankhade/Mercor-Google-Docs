@@ -18,7 +18,7 @@
 
 
 #templates{
-    width: 60%;
+    width: 70%;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     align-items: justify;
@@ -53,3 +53,126 @@
     height: 80%;
     width: 100%;
 }
+
+.newDocblank{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    line-height:20px;
+    padding: 0;
+    background-color: transparent;
+}
+
+.newDocblank>button+p{
+    font-size: 25px;
+    margin: 5px;
+}
+
+.newDocblank>button+p+p{
+    font-size: 15px;
+    margin: 5px;
+}
+
+.newDocblank>button>img{
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+
+/* New Doc Modal CSS */
+
+.modal {
+    font-family: arial;
+  }
+  
+  .modal {
+    position: fixed;
+    width: 400px;
+    z-index: 1040;
+    top: 30%;
+    left: 30%;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  }
+  
+  .backdrop {
+    position: fixed;
+    z-index: 1040;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    opacity: 0.5;
+  }
+  
+  .modal-title {
+    font-weight: 500;
+    font-size: 1.25rem;
+  }
+  
+  .modal-header {
+    border-bottom: 1px solid #e9ecef;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-desc,
+  .modal-header,
+  .modal-footer {
+    padding: 12px;
+  }
+  
+  .close-button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    border: none;
+    background-color: white;
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  button {
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: none;
+  }
+  
+  .modal-footer {
+    border-top: 1px solid #e9ecef;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+  }
+  
+  .secondary-button {
+    color: #fff;
+    background-color: #6c757d;
+  }
+  .primary-button {
+    color: #fff;
+    background-color: #007bff;
+  }
+  
+  .modal-example {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  #modalInput{
+    width: 300px;
+    margin: auto;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    background-color: #c2e7ff;
+  }
