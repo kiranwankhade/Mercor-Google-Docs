@@ -19,15 +19,24 @@ import {
   addDoc,
 } from "firebase/firestore";
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//     apiKey: "AIzaSyBO74j3UD5hfZLF78rUfuxQJqNuKLtC-Zw",
+//     authDomain: "mercordocs.firebaseapp.com",
+//     projectId: "mercordocs",
+//     storageBucket: "mercordocs.appspot.com",
+//     messagingSenderId: "1068003392369",
+//     appId: "1:1068003392369:web:a6cb37a2d13352dc4514d0",
+//     measurementId: "G-0TYDW5T4WW"
+//   };
 const firebaseConfig = {
-    apiKey: "AIzaSyBO74j3UD5hfZLF78rUfuxQJqNuKLtC-Zw",
-    authDomain: "mercordocs.firebaseapp.com",
-    projectId: "mercordocs",
-    storageBucket: "mercordocs.appspot.com",
-    messagingSenderId: "1068003392369",
-    appId: "1:1068003392369:web:a6cb37a2d13352dc4514d0",
-    measurementId: "G-0TYDW5T4WW"
-  };
+  apiKey: "AIzaSyBO74j3UD5hfZLF78rUfuxQJqNuKLtC-Zw",
+  authDomain: "mercordocs.firebaseapp.com",
+  projectId: "mercordocs",
+  storageBucket: "mercordocs.appspot.com",
+  messagingSenderId: "1068003392369",
+  appId: "1:1068003392369:web:a6cb37a2d13352dc4514d0",
+  measurementId: "G-0TYDW5T4WW"
+};
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 const db = getFirestore(app);

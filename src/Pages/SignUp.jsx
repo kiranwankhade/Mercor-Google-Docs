@@ -6,6 +6,7 @@ import {
   registerWithEmailAndPassword,
   signInWithGoogle,
 } from "../firebase";
+
 import "../Styles/SignUp.css";
 function SignUp() {
   const [email, setEmail] = useState("");
