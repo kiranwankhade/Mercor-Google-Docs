@@ -29,7 +29,7 @@ import {
 //     measurementId: "G-0TYDW5T4WW"
 //   };
 const firebaseConfig = {
-  apiKey: "AIzaSyBO74j3UD5hfZLF78rUfuxQJqNuKLtC-Zw",
+  apiKey: "AIzaSyDjjc0zB8nD8SRi92E6hmedVZWh2m_63tM",
   authDomain: "mercordocs.firebaseapp.com",
   projectId: "mercordocs",
   storageBucket: "mercordocs.appspot.com",
